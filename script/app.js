@@ -3,13 +3,17 @@ function handleFloatingLabel() {
 }
 
 function handlePasswordSwitcher() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-}
+    let input = document.getElementById('password');
+    let toggle = document.getElementById('togglePassword');
+  
+    toggle.addEventListener('click', function () {
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    });
+  }
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Script loaded!');
